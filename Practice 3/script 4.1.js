@@ -25,7 +25,6 @@ class Admin extends User {
     }
 }
 
-// Функція для отримання та валідації введених даних
 function getUserInput(promptMessage) {
     let input;
     do {
@@ -42,9 +41,7 @@ function getValidAge() {
     return Number(age);
 }
 
-// Вибір типу користувача
 const userType = getUserInput("Enter type of user:").toLowerCase();
-
 const name = getUserInput("Enter name:");
 const age = getValidAge();
 const profession = getUserInput("Enter profession:");

@@ -1,6 +1,5 @@
-// Клас Book (інкапсуляція через #private поля)
 class Book {
-    #title; // Приватна змінна
+    #title; 
     #author;
     #year;
 
@@ -10,7 +9,6 @@ class Book {
         this.#year = year;
     }
 
-    // Геттери
     getTitle() {
         return this.#title;
     }
@@ -23,7 +21,6 @@ class Book {
         return this.#year;
     }
 
-    // Метод для виводу інформації
     display() {
         const info = `Книга: ${this.#title}, Автор: ${this.#author}, Рік: ${this.#year}`;
         console.log(info);
@@ -31,14 +28,12 @@ class Book {
     }
 }
 
-// Клас EBook (наслідування + поліморфізм)
 class EBook extends Book {
     constructor(title, author, year, format) {
         super(title, author, year); 
         this.format = format;
     }
 
-    // Перевизначення методу display() (поліморфізм)
     display() {
         const info = `Електронна книга: ${this.getTitle()}, Автор: ${this.getAuthor()}, Рік: ${this.getYear()}, Формат: ${this.format}`;
         console.log(info);
@@ -46,7 +41,6 @@ class EBook extends Book {
     }
 }
 
-// Функція для отримання коректного вводу
 function getUserInput(promptMessage) {
     let input;
     do {
@@ -55,7 +49,6 @@ function getUserInput(promptMessage) {
     return input;
 }
 
-// Функція для отримання коректного року
 function getValidYear() {
     let year;
     do {
@@ -64,9 +57,7 @@ function getValidYear() {
     return Number(year);
 }
 
-// Вибір типу книги
 const bookType = getUserInput("Введіть тип книги (book або ebook):").toLowerCase();
-
 const title = getUserInput("Введіть назву книги:");
 const author = getUserInput("Введіть автора:");
 const year = getValidYear();
