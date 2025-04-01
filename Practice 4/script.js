@@ -12,9 +12,10 @@ addTaskButton.addEventListener("click", function() {
         taskList.appendChild(li);
         taskInput.value = "";
         }
+        
     });
 
-taskList.addEventListener("click", function(event) {
+taskList.addEventListener("mouseover", function(event) {
     if (event.target.tagName === "LI") {
         event.target.remove();
     }
