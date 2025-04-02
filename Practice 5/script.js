@@ -16,7 +16,7 @@ async function loadUsers() {
     displayUsers(users);
   } catch (error) {
     console.error("Помилка при отриманні даних:", error);
-    alert("Не вдалося отримати дані. Спробуйте ще раз.");
+    // alert("Не вдалося отримати дані. Спробуйте ще раз.");
   }
 }
 
@@ -28,5 +28,8 @@ function displayUsers(users) {
     const li = document.createElement("li");
     li.textContent = `${user.name} (${user.email})`;
     userList.appendChild(li);
+    if (user.id == 10){
+      li.textContent = `${user.name} (${user.email}, ${user.username})`;
+    }
   });
 }
