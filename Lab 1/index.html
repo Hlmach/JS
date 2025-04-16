@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" /> 
+</head>
+<body>
+  <h1>Resume Builder</h1> 
+
+  <!-- Форма для введення даних користувача -->
+  <form id="resume-form">
+    <h2>Personal Information</h2> 
+    <input type="text" id="first-name" placeholder="First Name" required /> 
+    <input type="text" id="last-name" placeholder="Last Name" required /> 
+    <input type="number" id="age" placeholder="Age" min="14" max="100" required /> 
+    <input type="text" id="address" placeholder="Address" required /> 
+    <input type="email" id="email" placeholder="Email" required />  
+    <input type="tel" id="phone" placeholder="Phone (+380XXXXXXXXX)" required /> 
+    <input type="text" id="position" placeholder="Position" required /> 
+    <textarea id="summary" placeholder="About Me" required></textarea>  
+    
+    <h2>Photo</h2> 
+    <input type="file" id="photo" accept="image/*" /> 
+
+    <h2>Education</h2> 
+    <textarea id="education" placeholder="Education (comma-separated)" required></textarea> 
+
+    <h2>Experience</h2> 
+    <textarea id="experience" placeholder="Experience (comma-separated)" required></textarea> 
+
+    <h2>Skills</h2> 
+    <textarea id="skills" placeholder="Skills (comma-separated)" required></textarea> 
+
+    <button type="submit">Generate Resume</button> 
+  </form>
+
+  <!-- Секція, що з'являється після заповнення форми і генерує резюме -->
+  <div id="resume-section" style="display: none;">
+    <div id="resume-display" contenteditable="true">
+      <div id="photo-preview" style="text-align:center;"></div> 
+    </div>
+    <button id="save-btn">Save Resume</button> 
+    <button id="clear-btn">Clear Resume</button> 
+    <button id="export-pdf-btn">Export to PDF</button>
+  </div>
+
+  <!-- Підключення зовнішніх скриптів для обробки генерації та експорту PDF -->
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>

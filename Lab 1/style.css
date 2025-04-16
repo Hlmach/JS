@@ -1,0 +1,101 @@
+/* Загальні стилі */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  color: #333;
+}
+
+/* Форма */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+/* Стилі для інпутів та текстових полів */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #fdfdfd;
+}
+
+/* Кнопки */
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #007acc;
+  color: #fff;
+}
+
+#save-btn,
+#export-pdf-btn,
+#clear-btn {
+  background-color: #555;
+  color: #fff;
+  margin-right: 10px;
+}
+
+/* Секція Резюме */
+#resume-section {
+  display: none;
+  background-color: #fff;
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+#resume-section h2 {
+  color: #007acc;
+}
+
+#resume-display p,
+#resume-display li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Кнопки в секції Резюме */
+.buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Адаптивні стилі для мобільних пристроїв */
+@media (max-width: 600px) {
+  form, #resume-section {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
