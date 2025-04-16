@@ -1,5 +1,5 @@
 "use strict";
-import { greet, add, multiply, sumAll } from "./utils.js";
+import { greet, add, multiply, sumAll, func } from "./utils.js";
 import { user, numbersArray } from "./data.js";
 
 console.log("Модульний код підключено!");
@@ -16,5 +16,7 @@ const extendedNumbers = [...numbersArray, 6, 7, 8];
 console.log("Розширений масив:", extendedNumbers);
 
 console.log("Сума чисел:", sumAll(1, 2, 3, 4, 5, 6));
+
+console.log("Протилежне: ", func(1, 2, 4, 5, 6, 7, 990));
 
 document.getElementById("app").innerHTML = `<p>${userInfo}</p>`;
